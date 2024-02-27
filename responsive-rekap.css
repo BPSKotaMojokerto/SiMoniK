@@ -1,0 +1,33 @@
+
+@media screen and (max-width: 900px){
+    h2{
+        margin-top: 15%;
+        margin-bottom: 6%;
+    }
+
+    .footer {
+        margin-top: 142%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    h2{
+        margin-top: 20%;
+        margin-bottom: 9%;
+    }
+    table {
+        margin-left: 0;
+        border-collapse: collapse;
+        width: 50%;
+        margin-top: 15px;
+        background-color: #696c9f;
+        color: white;
+        font-size: 8px;
+        margin-bottom: 100%;
+    }
+
+    .footer {
+        margin-top: 300%;
+    }
+}

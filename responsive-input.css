@@ -1,0 +1,33 @@
+@media screen and (max-width: 900px) {
+    .form {
+        margin-top: 15%;
+    }
+
+    .footer {
+        margin-top: 93%;
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
+    .form {
+        margin-top: 30%;
+    }
+
+    .form h2 {
+        font-family:  'Red Hat Display', sans-serif;
+        margin-top: 15%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .footer {
+        background-color: #111827;
+        color: white; 
+        padding: 10px; 
+        text-align: center; 
+        margin-top: 150%;
+        bottom: 0;
+    }
+}

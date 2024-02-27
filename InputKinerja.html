@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiMonik</title>
+        <link rel="stylesheet" href="InputKinerja.css">
+        <link rel="stylesheet" href="responsive-input.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="header">
+                    <div class="list-item">
+                        <a href="#">
+                            <img src="Utama.svg" alt="" class="icon">
+                            <span class="description-header">SiMonik</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="illustration">
+                    <img src="Untuk_Dashboard.png" alt="">
+                </div>
+                
+                <div class="main">
+                    <div class="list-item">
+                        <a href="index.html">
+                            <img src="Dashboard.svg" alt="" class="icon">
+                            <span class="description">Dashboard</span>
+                        </a>
+                    </div>
+                    <div class="list-item">
+                        <a href="InputKinerja.html">
+                            <img src="Input1.svg" alt="" class="icon">
+                            <span class="description">Input Kinerja Harian</span>
+                        </a>
+                    </div>
+                    <div class="list-item">
+                        <a href="Rekapkinerja.html">
+                            <img src="Rekap1.svg" alt="" class="icon">
+                            <span class="description">Rekap Kinerja</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-content">
+                <div class="menu-button">
+                    <div id="menu-button">
+                        <input type="checkbox" id="menu-checkbox">
+                        <label for="menu-checkbox" id="menu-label">
+                            <div id="hamburger"></div>
+                        </label>
+                    </div>
+                </div>
+                <form id="myForm">
+                    <div class="form">
+                        <h2>Silahkan Input Kinerja </h2>
+                        <div class="form-element">
+                            <label for="nama">Nama :</label>
+                            <select type="pilihan" id="pilihnama" name="pilihnama" required>
+                                <option value=""> --Pilih Nama--</option>
+                                <option value="Mimik Nurjanti, S.Si., MM">Mimik Nurjanti, S.Si., MM</option>
+                                <option value="Ir. Mardini Setiyowati, M.Si.">Ir. Mardini Setiyowati, M.Si.</option>
+                                <option value="Agip Yunaidi Solichin, S.Si., MM">Agip Yunaidi Solichin, S.Si., MM</option>
+                                <option value="Nurhidayah, SE.,M.M.">Nurhidayah, SE.,M.M.</option>
+                                <option value="Eko Budiono,SST.,M.T">Eko Budiono,SST.,M.T</option>
+                                <option value="Nasruddin, S.Si., M.Si.">Nasruddin, S.Si., M.Si.</option>
+                                <option value="Agung Prasetiyo, SST">Agung Prasetiyo, SST</option>
+                                <option value="Patkhurochim, SE">Patkhurochim, SE</option>
+                                <option value="Yuni Nurhidayati Wahyuningtiyas, SE">Yuni Nurhidayati Wahyuningtiyas, SE</option>
+                                <option value="SH. Muhammad Eko Susilo">SH. Muhammad Eko Susilo</option>
+                                <option value="Vitria Dina Paswandari, S.P.">Vitria Dina Paswandari, S.P.</option>
+                                <option value="Wa Sumini, S.Si">Wa Sumini, S.Si</option>
+                                <option value="Suwarno, A.Md">Suwarno, A.Md</option>
+                                <option value="Liza Mega Yunita, SST">Liza Mega Yunita, SST</option>
+                                <option value="Susanti Eka Rahayu, SST">Susanti Eka Rahayu, SST</option>
+                                <option value="Wilujeng Agustin Prihatini, S.Si">Wilujeng Agustin Prihatini, S.Si</option>
+                                <option value="Dinarta Hanum, S.Si., M.Si.">Dinarta Hanum, S.Si., M.Si.</option>
+                                <option value="Nurani Wahyuning Aprilia, S.Tr.Stat">Nurani Wahyuning Aprilia, S.Tr.Stat</option>
+                                <option value="Auhge Eva Sari Manik, S.P., M.si.">Auhge Eva Sari Manik, S.P., M.si.</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label for="Tanggal"> Tanggal : </label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="namakegiatan"> Nama Kegiatan :</label>
+                            <input type="text" id="namakegiatan" name="namakegiatan" placeholder=" Masukkan Kegiatan Anda" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="Volume"> Volume Kegiatan : </label>
+                            <input type="number" id="volume" name="volume" placeholder=" Masukkan volume kegiatan" min="1" max="100" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="SatuanKegiatan"> Satuan Kegiatan :</label>
+                            <input type="text" id="satuankegiatan" name="satuankegiatan" placeholder=" Masukkan Satuan Kegiatan" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="LamaKegiatan"> Lama Kegiatan :</label>
+                            <input type="number" id="kegiatanjam" name="kegiatanjam" placeholder=" Jam" required>
+                            <input type="number" id="kegiatanmenit" name="kegiatanmenit" placeholder=" Menit" required>
+                            <button type="submit" id="btn1">Submit</button>
+                        </div>
+                        <div class="form-element">
+                            <div class="popup1" id="popup1">
+                                <img src="ceklis.png">
+                                <h2>Thank You!</h2>
+                                <p>Your details has been succesfully submitted</p>
+                                <button type="button" id="ok">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <footer class="footer">
+                    <p class="copyright">Copyright 2024|SiMonik - Unesa21 </p>
+                </footer>
+            </div>
+            
+        </div>
+
+        <script src="InputKinerja.Js"></script>
+    </body>
+</html>

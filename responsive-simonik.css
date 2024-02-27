@@ -1,0 +1,46 @@
+
+@media screen and (max-width: 900px) {
+    .home h1{
+        font-size: 35px;
+        font-family: "elephant";
+        font-weight: bold;
+        color :#364F6B;
+        margin-top: 18%;
+        margin-bottom: 10px;
+        text-align: center; 
+        margin-right: 15%;
+    }
+
+    .informasiBPS{
+        margin-top: 50%;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .home h1{
+        font-size: 18px;
+        font-family: "elephant";
+        font-weight: bold;
+        color :#364F6B;
+        margin-top: 15%;
+        margin-bottom: 10px;
+        text-align: center; 
+        margin-right: 15%;
+    }
+
+    .home h2{
+        font-size: 18px;
+        font-family: "elephant";
+        font-weight: bold;
+        margin-top: 3%;
+        color :#364F6B;
+        text-align: center;
+        margin-right: 20%;
+    }
+
+    .informasiBPS{
+        margin-top: 70%;
+        font-size: 12px;
+    }
+}
