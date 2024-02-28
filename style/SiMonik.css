@@ -31,7 +31,7 @@
 
 .main-content {
     background-color: #EEEEEE;
-    background-image: url('Desain_Dashboard.png');
+    background-image: url('./image/Desain_Dashboard.png');
     background-size: cover;
     flex-grow:1;
     width: 100%;
