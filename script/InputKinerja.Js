@@ -89,7 +89,7 @@ function dataForm(e) {
     var selectedDate = new Date (tanggal_kegiatan);
     var bulan_kegiatan = selectedDate.getMonth() + 1;
 
-    fetch('https://bebps-pmtomwz2p-ochas-projects.vercel.app/submit', {
+    fetch('http://bebps-ochas-projects.vercel.app/submit', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -129,7 +129,7 @@ function fetchDataToEdit() {
 
     // Jika ada ID, ambil data dari server dan isi kolom input
     if (id) {
-        fetch(`https://bebps-pmtomwz2p-ochas-projects.vercel.app/rekap/${id}`)
+        fetch(`http://bebps-ochas-projects.vercel.app/rekap/${id}`)
         .then(response => response.json())
         .then(data => {
             // Populate input fields with data
@@ -177,7 +177,7 @@ function saveData() {
     };
 
     // Mengirim data yang diedit ke server untuk diperbarui
-    fetch(`https://bebps-pmtomwz2p-ochas-projects.vercel.app/rekap/${id}`, {
+    fetch(`http://bebps-ochas-projects.vercel.app/rekap/${id}`, {
         method: 'PUT', // Menggunakan metode PUT untuk pembaruan data
         headers: {
             "Content-Type": "application/json",
@@ -210,7 +210,7 @@ function saveOrUpdateData() {
 
     if (id) {
         // Update data
-        fetch(`https://bebps-pmtomwz2p-ochas-projects.vercel.app/rekap/${id}`, {
+        fetch(`http://bebps-ochas-projects.vercel.app/rekap/${id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -229,7 +229,7 @@ function saveOrUpdateData() {
         });
     } else {
         // Save new data
-        fetch('https://bebps-pmtomwz2p-ochas-projects.vercel.app/submit', {
+        fetch('http://bebps-ochas-projects.vercel.app/submit', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
