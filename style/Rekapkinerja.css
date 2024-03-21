@@ -263,7 +263,8 @@ h2{
     cursor: pointer;
 }
 
-.form-element input[type="date"]{
+.form-element input[type="date"],
+.form-elementinput[type="month"]{
     width: 46%;
     padding: 10px;
     outline: none;
