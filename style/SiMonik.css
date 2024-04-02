@@ -31,10 +31,13 @@
 
 .main-content {
     background-color: #EEEEEE;
-    flex-grow: 1;
+    background-image: url('./image/Desain_Dashboard.png');
+    background-size: cover;
+    flex-grow:1;
     width: 100%;
     margin-left: 260px; /* Add this property */
     transition: margin-left 0.3s ease-in; /* Add this property */
+    padding-bottom: 50px; /* Tambahkan padding bottom */
 }
 
 .sidebar.hide ~ .main-content {
@@ -241,96 +244,61 @@
     }
 }
 
-h2{
-    margin-top: 6%;
+
+ /* .centered-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}  */
+
+
+.home h1{
+    font-size: 35px;
+    font-family: "elephant";
+    font-weight: bold;
+    color :#364F6B;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    text-align: center; 
+    margin-right: 20%;
+}
+
+.home h2{
+    font-size: 33px;
+    font-family: "elephant";
+    font-weight: bold;
+    margin-top: 3%;
+    color :#364F6B;
     text-align: center;
-    font-size: 40px;
-    font-family: 'Red Hat Display', sans-serif;
+    margin-right: 20%;
 }
 
-.form-element{
-    margin-left: 20px;
-    margin-top: 2%;
+.gambar_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 20%;
 }
 
-.form-element select[type="pilihan"]{
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 1%;
-    outline: none;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    cursor: pointer;
+.ig_bps {
+    margin-top: 4%;
+    margin-left: 0.7%;
+}
+.website_bps {
+    margin-left: 1%;
 }
 
-.form-element input[type="date"]{
-    width: 46%;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-table {
-    margin-left: 20px;
-    border-collapse: collapse;
-    width: 95%;
-    margin-top: 15px;
-    background-color: #696c9f;
-    color: white;
-    font-size: 14px;
-
-}
-  
-td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    cursor: pointer;
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-#rekap-kinerja tbody tr:nth-child(even) {
-    background-color: white; 
-    color: black;
-}
-
-#rekap-kinerja tbody tr:nth-child(odd) {
-    background-color: white; 
-    color: black;
-}
-
-.tampilkan {
-    background-color: #111827; 
-    border: none;
-    color: white; 
-    padding: 10px 20px; 
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.tampilkan:hover {
-    font-weight: bolder;
-    color: #111827;
-    background-color: transparent;
-    border: solid 1px;
-}
-
-.footer {
+/* .footer {
     background-color: #111827; 
     color: white; 
     padding: 10px; 
     text-align: center; 
-    margin-top: 60%;
-}
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+} */
