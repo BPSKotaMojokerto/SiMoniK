@@ -81,12 +81,13 @@
 }
 
 .sidebar .header .illustration {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    margin: 10px 0 22px 0 ;
-    box-sizing: border-box;
+    display: block; 
+    justify-content: center;
+    max-width: 100%; 
+    height: auto; 
+    margin: 10px 0 22px 0; 
+    padding: 10px; 
+    box-sizing: border-box; 
 }
 
 .sidebar.hide .illustration {
@@ -259,18 +260,20 @@ h2{
     margin-bottom: 1%;
     outline: none;
     border: 1px solid #aaa;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    border-color: #111827;
 }
 
 .form-element input[type="date"],
-.form-elementinput[type="month"]{
-    width: 46%;
+.form-element input[type="month"]{
+    width: 35%;
     padding: 10px;
     outline: none;
     border: 1px solid #aaa;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    border-color: #111827;
 }
 
 table {
@@ -327,6 +330,28 @@ th {
     background-color: transparent;
     border: solid 1px;
 }
+
+#report-list button {
+    /* Atur properti CSS sesuai kebutuhan Anda */
+    background-color: #111827; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    padding: 10px 5px; /* Padding di sekitar teks tombol */
+    border: none; /* Hapus border tombol */
+    border-radius: 10px; /* Sudut lengkung tombol */
+    cursor: pointer; /* Ubah kursor saat diarahkan ke tombol */
+    font-size: 15px; /* Ukuran teks tombol */
+}
+
+#report-list button.edit-btn:hover {
+    /* Gaya saat tombol "Edit" dihover */
+    background-color: #0056b3; /* Warna latar belakang tombol */
+}
+
+#report-list button.delete-btn:hover {
+    /* Gaya saat tombol "Hapus" dihover */
+    background-color: #c82333; /* Warna latar belakang tombol */
+}
+
 
 .footer {
     background-color: #111827; 

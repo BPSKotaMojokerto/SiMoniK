@@ -86,12 +86,13 @@
 }
 
 .sidebar .header .illustration {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    margin: 10px 0 22px 0 ;
-    box-sizing: border-box;
+    display: block; 
+    justify-content: center;
+    max-width: 100%; 
+    height: auto; 
+    margin: 10px 0 22px 0; 
+    padding: 10px; 
+    box-sizing: border-box; 
 }
 
 .sidebar.hide .illustration {
@@ -280,6 +281,7 @@
     border: 1px solid #aaa;
     border-radius: 5px;
     cursor: pointer;
+    border-color: #111827;
 }
 
 .form .form-element input[type="text"],
@@ -293,6 +295,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
+    border-color: #111827;
 }
 
 .form .form-element button {
@@ -333,6 +336,7 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
+  border-color: #111827;
 }
 
 .popup1{
