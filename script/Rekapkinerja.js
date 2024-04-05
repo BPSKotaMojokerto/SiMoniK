@@ -148,7 +148,7 @@ function processData(data) {
 
 // Fungsi untuk mengirim permintaan penghapusan data ke server
 function deleteData(id) {
-    fetch(`https://lbe-simonik-f6x9lq1ua-ochas-projects.vercel.app/rekap/${id}`, {
+    fetch(`https://be-simonik-f6x9lq1ua-ochas-projects.vercel.app/rekap/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
