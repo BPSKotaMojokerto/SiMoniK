@@ -279,10 +279,17 @@
     padding: 10px;
     outline: none;
     border: 1px solid #aaa;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     border-color: #111827;
+    font-size: 16px;
 }
+  
+select#pilihnama option:checked {
+    background-color: #007bff; 
+    color: #fff; 
+}
+  
 
 .form .form-element input[type="text"],
 .form .form-element input[type="date"],
@@ -292,7 +299,7 @@
     border: 1px solid #aaa;
     outline: none;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 5px;
     border-color: #111827;
@@ -318,7 +325,6 @@
     border: solid 1px;
 }
 
-
 /* Gaya input waktu */
 .form .form-element label[for="waktu-mulai"],
 .form .form-element label[for="waktu-selesai"] {
@@ -333,7 +339,7 @@
   border: 1px solid #aaa;
   outline: none;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   margin-top: 5px;
   border-color: #111827;
@@ -367,10 +373,12 @@
     margin: 30px 0 10px;
 }
 
+
 .footer {
     background-color: #111827;
     color: white; 
     padding: 10px; 
     text-align: center; 
     margin-top: 5%;
+    padding-bottom: 0;
 }

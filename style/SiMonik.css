@@ -246,16 +246,6 @@
     }
 }
 
-
- /* .centered-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%; 
-}  */
-
-
 .home h1{
     font-size: 35px;
     font-family: "elephant";
@@ -272,6 +262,24 @@
     font-family: "elephant";
     font-weight: bold;
     margin-top: 3%;
+    color :#364F6B;
+    text-align: center;
+    margin-right: 20%;
+}
+
+.home h3{
+    font-size: 25px;
+    font-family: "elephant";
+    font-weight: bold;
+    color :#364F6B;
+    text-align: center;
+    margin-right: 20%;
+}
+
+.home h4{
+    font-size: 33px;
+    font-family: "elephant";
+    font-weight: bold;
     color :#364F6B;
     text-align: center;
     margin-right: 20%;
