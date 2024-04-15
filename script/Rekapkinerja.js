@@ -148,7 +148,7 @@ function processData(data) {
 
 // Fungsi untuk mengirim permintaan penghapusan data ke server
 function deleteData(id) {
-    fetch(`https://be-simonik-5v7tusxnu-ochas-projects.vercel.app/rekap/${id}`, {
+    fetch(`https://be-simonik-du3us4y1s-ochas-projects.vercel.app/rekap/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
@@ -179,7 +179,7 @@ function loadData() {
     const selectedDate = document.getElementById('tanggal-kegiatan').value;
     const selectedMonth = document.getElementById('bulan-kegiatan').value;
 
-    let url = 'https://be-simonik-5v7tusxnu-ochas-projects.vercel.app/rekap';
+    let url = 'https://be-simonik-du3us4y1s-ochas-projects.vercel.app/rekap';
 
     if (selectedName || selectedDate || selectedMonth) {
         url += '?';
