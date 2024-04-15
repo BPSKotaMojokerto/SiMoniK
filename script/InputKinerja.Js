@@ -129,7 +129,7 @@ function fetchDataToEdit() {
 
     // Jika ada ID, ambil data dari server dan isi kolom input
     if (id) {
-        fetch(`https://be-simonik-lfft849oh-ochas-projects.vercel.app/rekap/${id}`)
+        fetch(`http://be-simonik-3wdwlyyqs-ochas-projects.vercel.app/rekap/${id}`)
         .then(response => response.json())
         .then(data => {
             // Populate input fields with data
@@ -177,7 +177,7 @@ function saveData() {
     };
 
     // Mengirim data yang diedit ke server untuk diperbarui
-    fetch(`https://be-simonik-lfft849oh-ochas-projects.vercel.app/rekap/${id}`, {
+    fetch(`http://be-simonik-3wdwlyyqs-ochas-projects.vercel.app/rekap/${id}`, {
         method: 'PUT', // Menggunakan metode PUT untuk pembaruan data
         headers: {
             "Content-Type": "application/json",
@@ -265,7 +265,7 @@ function saveOrUpdateData() {
 
     if (id) {
         // Update data
-        fetch(`https://be-simonik-lfft849oh-ochas-projects.vercel.app/rekap/${id}`, {
+        fetch(`http://be-simonik-3wdwlyyqs-ochas-projects.vercel.app/rekap/${id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -287,7 +287,7 @@ function saveOrUpdateData() {
         });
     } else {
         // Save new data
-        fetch('https://be-simonik-lfft849oh-ochas-projects.vercel.app/submit', {
+        fetch('http://be-simonik-3wdwlyyqs-ochas-projects.vercel.app/submit', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
