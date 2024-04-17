@@ -151,7 +151,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #111827;
+    background-color: #EEEEEE;
 }
 
 #menu-label:after, #menu-label:before{
@@ -177,7 +177,7 @@
     top: 5px;
     right: 0;
     left: 0;
-    color: #111827;
+    color: #e8e5f3;
     font-size: 10px;
     font-weight: bold;
     text-align: center;
@@ -350,14 +350,4 @@ th {
 #report-list button.delete-btn:hover {
     /* Gaya saat tombol "Hapus" dihover */
     background-color: #c82333; /* Warna latar belakang tombol */
-}
-
-
-.footer {
-    background-color: #111827; 
-    color: white; 
-    padding: 10px; 
-    text-align: center; 
-    margin-top: 60%;
-    padding-bottom: 0
 }

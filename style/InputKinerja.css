@@ -156,7 +156,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #111827;
+    background-color: #EEEEEE;
 }
 
 #menu-label:after, #menu-label:before{
@@ -182,7 +182,7 @@
     top: 5px;
     right: 0;
     left: 0;
-    color: #111827;
+    color: #e8e5f3;
     font-size: 10px;
     font-weight: bold;
     text-align: center;
@@ -270,6 +270,7 @@
     font-size: 14px;
     color: #222;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .form .form-element select[type="pilihan"]{
@@ -283,6 +284,7 @@
     cursor: pointer;
     border-color: #111827;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
   
 select#pilihnama option:checked {
@@ -299,6 +301,7 @@ select#pilihnama option:checked {
     border: 1px solid #aaa;
     outline: none;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 5px;
@@ -373,12 +376,3 @@ select#pilihnama option:checked {
     margin: 30px 0 10px;
 }
 
-
-.footer {
-    background-color: #111827;
-    color: white; 
-    padding: 10px; 
-    text-align: center; 
-    margin-top: 5%;
-    padding-bottom: 0;
-}
