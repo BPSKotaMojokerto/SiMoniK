@@ -17,11 +17,11 @@
     box-sizing: border-box;
     flex-direction: column;
     transition: all ease-in 0.3s;
-    position: fixed; /* Add this property */
-    top: 0; /* Add this property */
-    left: 0; /* Add this property */
-    height: 100%; /* Add this property */
-    overflow-y: auto; /* Add this property */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    overflow-y: auto; 
 }
 
 .sidebar.hide {
@@ -33,12 +33,12 @@
     background-color: #EEEEEE;
     flex-grow: 1;
     width: 100%;
-    margin-left: 260px; /* Add this property */
-    transition: margin-left 0.3s ease-in; /* Add this property */
+    margin-left: 260px; 
+    transition: margin-left 0.3s ease-in; 
 }
 
 .sidebar.hide ~ .main-content {
-    margin-left: 87px; /* Add this property */
+    margin-left: 87px; 
 }
 
 .menu-button {

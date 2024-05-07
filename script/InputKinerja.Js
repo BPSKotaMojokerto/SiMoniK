@@ -7,19 +7,19 @@ menu.addEventListener('click', function() {
 });
 
 
-var submit = document.querySelectorAll(".btn1");
-var okThx = document.getElementById("ok")
-var popupThx = document.getElementById("popup1")
+// var submit = document.querySelectorAll(".btn1");
+// var okThx = document.getElementById("ok")
+// var popupThx = document.getElementById("popup1")
 
-okThx.onclick = function(){
-    popupThx.style.display = "none";
-};
+// okThx.onclick = function(){
+//     popupThx.style.display = "none";
+// };
 
-submit.forEach(btn => {
-    btn.onclick = function(){
-        popupThx.style.display = "block";
-    };
-});
+// submit.forEach(btn => {
+//     btn.onclick = function(){
+//         popupThx.style.display = "block";
+//     };
+// });
 
 
 function fetchDataToEdit() {
