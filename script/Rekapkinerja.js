@@ -7,7 +7,7 @@ menu.addEventListener('click', function() {
 })
 
 
-// Fungsi untuk memproses data dan menampilkan di tabel
+// Fungsi untuk memproses dan menampilkan data yang diterima dari server.
 function processData(data) {
     const selectedName = document.getElementById('nama-pegawai').value;
     const selectedDate = document.getElementById('tanggal-kegiatan').value;
@@ -22,6 +22,7 @@ function processData(data) {
         if (report.nama_pegawai === selectedName && 
             ((selectedDate && report.tanggal_kegiatan === selectedDate) || // Filter berdasarkan tanggal
             (selectedMonth && bulanKegiatan === getNumericMonth(selectedMonth)))) { // Filter berdasarkan bulan
+            // Jika data memenuhi kriteria, tambahkan baris data dalam bentuk HTML ke reportList    
             reportList += `<tr>
                               <td>${report.nama_pegawai}</td>
                               <td>${report.tanggal_kegiatan}</td>
@@ -38,7 +39,7 @@ function processData(data) {
         }
     });
 
-    // Menampilkan data yang telah difilter
+    // Menampilkan data yang telah difilter dalam elemen dengan id 'report-list'
     document.getElementById('report-list').innerHTML = reportList;
 
     // Mengatur tampilan tombol edit dan hapus berdasarkan jumlah data yang dimuat
@@ -84,30 +85,33 @@ function getNumericMonth(month) {
 }
 
 // Fungsi untuk memuat data dari server berdasarkan filter yang dipilih
-// function loadData() {
-//     const selectedName = document.getElementById('nama-pegawai').value;
-//     const selectedDate = document.getElementById('tanggal-kegiatan').value;
-//     const selectedMonth = document.getElementById('bulan-kegiatan').value;
+function loadData() {
+    const selectedName = document.getElementById('nama-pegawai').value;
+    const selectedDate = document.getElementById('tanggal-kegiatan').value;
+    const selectedMonth = document.getElementById('bulan-kegiatan').value;
 
-//     let url = 'https://be-simonik.vercel.app/rekap';
+    // Mendefinisikan URL awal untuk mengambil data dari server
+    let url = 'https://be-simonik.vercel.app/rekap';
 
-//     if (selectedName || selectedDate || selectedMonth) {
-//         url += '?';
-//         if (selectedName) url += `nama=${selectedName}&`;
-//         if (selectedDate) url += `tanggal=${selectedDate}&`;
-//         if (selectedMonth) url += `bulan=${getNumericMonth(selectedMonth)}`;
-//     }
+    // Memeriksa apakah ada kriteria pemfilteran yang dipilih (nama, tanggal, atau bulan)
+    if (selectedName || selectedDate || selectedMonth) {
+        url += '?';
+        if (selectedName) url += `nama=${selectedName}&`;
+        if (selectedDate) url += `tanggal=${selectedDate}&`;
+        if (selectedMonth) url += `bulan=${getNumericMonth(selectedMonth)}`;
+    }
 
-//     fetch(url)
-//         .then(response => response.json()) 
-//         .then(data => {
-//             processData(data); // Memproses dan menampilkan data
-//         })
-//         .catch(error => {
-//             console.error('Error fetching data:', error);
-//             // Tampilkan pesan kesalahan jika terjadi kesalahan saat mengambil data
-//         });
-// }
+    // Mengambil data dari server menggunakan fetch API dengan URL yang telah dibuat
+    fetch(url)
+        .then(response => response.json()) 
+        .then(data => {
+            processData(data); // Memanggil fungsi processData() untuk memproses dan menampilkan data yang diterima
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            // Tampilkan pesan kesalahan jika terjadi kesalahan saat mengambil data
+        });
+}
 
 function editData(id) {
     // Redirect user to InputKinerja.html with the ID of the data to be edited
