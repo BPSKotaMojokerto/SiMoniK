@@ -21,17 +21,17 @@ menu.addEventListener('click', function() {
 //     };
 // });
 
-
+//mengambil data dari server untuk diedit berdasarkan ID 
 function fetchDataToEdit() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
+    const urlParams = new URLSearchParams(window.location.search); //Membuat objek URLSearchParams yang akan mengurai parameter dari URL saat ini
+    const id = urlParams.get('id'); //mengambil nilai parameter 'id' dari URL.
 
     // Jika ada ID, ambil data dari server dan isi kolom input
     if (id) {
-        fetch(`https://be-simonik.vercel.app/rekap/${id}`)
+        fetch(`https://be-simonik.vercel.app/rekap/${id}`) //permintaan fetch untuk mengambil data dari server berdasarkan ID yang diberikan.
         .then(response => response.json())
         .then(data => {
-            // Populate input fields with data
+            //engakses data yang diterima dari server dan mempopulasi kolom input dengan data yang sesuai. 
             document.getElementById('pilihnama').value = data.nama_pegawai;
             document.getElementById('tanggal').value = data.tanggal_kegiatan;
             document.getElementById('namakegiatan').value = data.nama_kegiatan;
@@ -58,41 +58,42 @@ function fetchDataToEdit() {
     }
 }
 
+//menyimpan data yang telah diedit dari form ke server
+// function saveData() {
+//     // Mendapatkan ID data yang sedang diedit dari URL
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const id = urlParams.get('id');
 
-function saveData() {
-    // Mendapatkan ID data yang sedang diedit dari URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
+//     // Mendapatkan data yang diedit dari input fields
+//     const editedData = {
+//         nama_pegawai: document.getElementById("pilihnama").value,
+//         tanggal_kegiatan: document.getElementById("tanggal").value,
+//         nama_kegiatan: document.getElementById("namakegiatan").value,
+//         volume_kegiatan: document.getElementById("volume").value,
+//         satuan_kegiatan: document.getElementById("satuankegiatan").value,
+//         waktu_mulai: document.getElementById("waktu-mulai").value,
+//         waktu_selesai: document.getElementById("waktu-selesai").value
+//     };
 
-    // Mendapatkan data yang diedit dari input fields
-    const editedData = {
-        nama_pegawai: document.getElementById("pilihnama").value,
-        tanggal_kegiatan: document.getElementById("tanggal").value,
-        nama_kegiatan: document.getElementById("namakegiatan").value,
-        volume_kegiatan: document.getElementById("volume").value,
-        satuan_kegiatan: document.getElementById("satuankegiatan").value,
-        waktu_mulai: document.getElementById("waktu-mulai").value,
-        waktu_selesai: document.getElementById("waktu-selesai").value
-    };
-
-    // Mengirim data yang diedit ke server untuk diperbarui
-    fetch(`https://be-simonik.vercel.app/rekap/${id}`, {
-        method: 'PUT', // Menggunakan metode PUT untuk pembaruan data
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(editedData)
-    })
-    .then(response => {
-        console.error('Error updating data:', response.statusText);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
+//     // Mengirim data yang diedit ke server untuk diperbarui
+//     fetch(`https://be-simonik.vercel.app/rekap/${id}`, {
+//         method: 'PUT', // Menggunakan metode PUT untuk pembaruan data
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(editedData)
+//     })
+//     .then(response => {
+//         console.error('Error updating data:', response.statusText);
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//     });
+// }
 
 window.onload = fetchDataToEdit;
 
+//menyimpan atau memperbarui data
 function saveOrUpdateData() {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
@@ -130,7 +131,7 @@ function saveOrUpdateData() {
             console.error('Error:', error);
         });
     } else {
-        // Save new data
+        // menyimpan data baru
         fetch('https://be-simonik.vercel.app/submit', {
             method: 'POST',
             headers: {
