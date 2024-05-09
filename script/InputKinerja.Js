@@ -6,21 +6,6 @@ menu.addEventListener('click', function() {
     console.log('ok');
 });
 
-
-// var submit = document.querySelectorAll(".btn1");
-// var okThx = document.getElementById("ok")
-// var popupThx = document.getElementById("popup1")
-
-// okThx.onclick = function(){
-//     popupThx.style.display = "none";
-// };
-
-// submit.forEach(btn => {
-//     btn.onclick = function(){
-//         popupThx.style.display = "block";
-//     };
-// });
-
 //mengambil data dari server untuk diedit berdasarkan ID 
 function fetchDataToEdit() {
     const urlParams = new URLSearchParams(window.location.search); //Membuat objek URLSearchParams yang akan mengurai parameter dari URL saat ini
@@ -57,39 +42,6 @@ function fetchDataToEdit() {
         // Kosongkan input fields lainnya jika ada
     }
 }
-
-//menyimpan data yang telah diedit dari form ke server
-// function saveData() {
-//     // Mendapatkan ID data yang sedang diedit dari URL
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const id = urlParams.get('id');
-
-//     // Mendapatkan data yang diedit dari input fields
-//     const editedData = {
-//         nama_pegawai: document.getElementById("pilihnama").value,
-//         tanggal_kegiatan: document.getElementById("tanggal").value,
-//         nama_kegiatan: document.getElementById("namakegiatan").value,
-//         volume_kegiatan: document.getElementById("volume").value,
-//         satuan_kegiatan: document.getElementById("satuankegiatan").value,
-//         waktu_mulai: document.getElementById("waktu-mulai").value,
-//         waktu_selesai: document.getElementById("waktu-selesai").value
-//     };
-
-//     // Mengirim data yang diedit ke server untuk diperbarui
-//     fetch(`https://be-simonik.vercel.app/rekap/${id}`, {
-//         method: 'PUT', // Menggunakan metode PUT untuk pembaruan data
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(editedData)
-//     })
-//     .then(response => {
-//         console.error('Error updating data:', response.statusText);
-//     })
-//     .catch(error => {
-//         console.error('Error:', error);
-//     });
-// }
 
 window.onload = fetchDataToEdit;
 
