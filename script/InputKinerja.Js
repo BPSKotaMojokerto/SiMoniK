@@ -109,4 +109,3 @@ function saveOrUpdateData() {
 
 var submitBtn = document.getElementById("btn1");
 submitBtn.addEventListener("click", saveOrUpdateData);
-

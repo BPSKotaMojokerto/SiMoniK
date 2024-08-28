@@ -117,4 +117,3 @@ function editData(id) {
     // Redirect user to InputKinerja.html with the ID of the data to be edited
     window.location.href = `InputKinerja.html?id=${id}`;
 }
-
